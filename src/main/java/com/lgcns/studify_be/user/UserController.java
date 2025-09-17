@@ -8,7 +8,7 @@ import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/studify/api/v1/users")
 @RequiredArgsConstructor
 public class UserController {
     private final UserService service;
