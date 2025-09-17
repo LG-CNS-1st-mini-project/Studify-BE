@@ -39,7 +39,8 @@ dependencies {
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.12'
 // 2.8.12로 의존성 한 줄 만 최신으로 변경 (2.8.12)
 	implementation 'org.springframework.boot:spring-boot-starter-validation'//DTO + 유효성검사 붙이기
-	
+	implementation 'org.mariadb.jdbc:mariadb-java-client' //마리아디비
+
 }
 
 tasks.named('test') {
