@@ -21,7 +21,7 @@ import jakarta.validation.Valid; // ✅ Bean Validation 활성화
 import java.net.URI;
 
 @RestController
-@RequestMapping("/api/teams")        // 팀 관련 REST 엔드포인트 루트
+@RequestMapping("/studify/api/v1/teams")        // 팀 관련 REST 엔드포인트 루트
 @RequiredArgsConstructor             // final 필드 기반 생성자 자동 생성
 public class TeamController {
 
