@@ -3,6 +3,8 @@ package com.lgcns.studify_be.comment.domain.entity;
 import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.lgcns.studify_be.post.domain.entity.PostEntity;
+import com.lgcns.studify_be.user.User;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -44,14 +46,12 @@ public class CommentEntity {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id", nullable = false)
-    // private UserEntity user;
-    private Long user;
+    private User user;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "post_id", nullable = false)
     @JsonBackReference
-    // private PostEntity post;
-    private Long post;
+    private PostEntity post;
 
     @PrePersist
     protected void onCreate() {

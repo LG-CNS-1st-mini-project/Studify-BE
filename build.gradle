@@ -34,6 +34,26 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// 요청바디 검증용( @NotBlank, @Email, @Size 등)
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // 비밀번호 해시(BCrypt)만 쓸 거라 security-crypto만 추가
+    implementation 'org.springframework.security:spring-security-crypto'
+	
+	// env
+	implementation 'io.github.cdimascio:dotenv-java:3.0.0'
+
+	// swagger + springboot 3.x 
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	runtimeOnly    'io.jsonwebtoken:jjwt-impl:0.11.5'
+	runtimeOnly    'io.jsonwebtoken:jjwt-jackson:0.11.5' // JSON 직렬화
+
+	
+
+
 }
 
 tasks.named('test') {
